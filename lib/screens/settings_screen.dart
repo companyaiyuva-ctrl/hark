@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show Switch;
+import 'package:flutter/material.dart' show Material, MaterialType, Switch;;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:forui/forui.dart';
@@ -302,11 +302,14 @@ class _WakeWordToggle extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 8),
-                Switch(
-                  value: enabled,
-                  onChanged: onChanged,
-                  activeThumbColor: colors.primary,
-                ),
+                 Material(
+  type: MaterialType.transparency,
+  child: Switch(
+    value: enabled,
+    onChanged: onChanged,
+    activeThumbColor: colors.primary,
+  ),
+),
               ],
             ),
     );
