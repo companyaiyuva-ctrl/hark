@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show Material, MaterialType, Switch;;
+import 'package:flutter/material.dart' show Material, MaterialType, Switch;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:forui/forui.dart';
