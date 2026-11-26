@@ -60,12 +60,15 @@ class OverlayBridgeService extends Notifier<bool>
     }
   }
 
-  @override
-  void onOverlayDismissed() {
-    debugPrint('OverlayBridge: overlay dismissed');
-    state = false;
-  }
+    @override
+void onOverlayDismissed() {
+  debugPrint('OverlayBridge: overlay dismissed');
+  state = false;
 
+  // Stop microphone listening and resume wake-word detection.
+  ref.read(chatProvider.notifier).cancelListening();
+}
+  
   @override
   void onOverlayMicPressed() {
     debugPrint('OverlayBridge: mic pressed from overlay');
